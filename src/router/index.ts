@@ -1,16 +1,18 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+import masterRoutes from './master'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
-    path: "/",
-    name: "home",
-    component: () => import("../views/HomeView.vue"),
+    path: '/',
+    name: 'home',
+    component: () => import('../views/HomeView.vue'),
   },
   {
     path: '/product',
     name: 'product',
     component: () => import('../views/SecondView.vue'),
-  }
+  },
+  ...masterRoutes,
 ]
 
 const router = createRouter({
