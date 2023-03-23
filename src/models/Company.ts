@@ -1,4 +1,4 @@
-import { ICurrency } from '../currency/Currency'
+import { ICurrency } from '~/models/Currency'
 
 export interface ICompany {
   companyId: number
