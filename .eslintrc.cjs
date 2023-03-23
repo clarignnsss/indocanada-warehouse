@@ -13,8 +13,6 @@ module.exports = {
         'plugin:vue/vue3-recommended',
     ],
     rules: {
-      'vue/multi-word-component-names': 'off',
-      'vue/no-reserved-component-names': 'off',
       'quotes': ['error', 'single'],
     },
 }
