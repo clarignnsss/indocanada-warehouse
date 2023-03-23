@@ -21,9 +21,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import NavigationMenu from './NavigationMenu.vue';
-import { items } from './NavigationItem';
+import { ref } from 'vue'
+import NavigationMenu from './NavigationMenu.vue'
+import { items } from './NavigationItem'
 
 const visible = ref(false)
 const itemsRef = ref(items)

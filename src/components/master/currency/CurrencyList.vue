@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { ICurrency } from '~/models/Currency';
+import { ICurrency } from '~/models/Currency'
 
 interface Props {
   items: ICurrency[]

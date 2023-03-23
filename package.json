@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue src --fix",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"

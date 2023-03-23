@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue'
 import { ICompany } from '~/models/Company'
 import CompanyList from '~/components/master/company/CompanyList.vue'
 

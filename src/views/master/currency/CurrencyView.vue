@@ -16,10 +16,10 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { useRouter } from 'vue-router';
-import CurrencyList from '~/components/master/currency/CurrencyList.vue';
-import { ICurrency } from '~/models/Currency';
+import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import CurrencyList from '~/components/master/currency/CurrencyList.vue'
+import { ICurrency } from '~/models/Currency'
 
 const currenciesRef = ref([] as ICurrency[])
 const router = useRouter()

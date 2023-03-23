@@ -24,8 +24,8 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
-import { NavigationItem } from './NavigationItem';
+import { RouterLink } from 'vue-router'
+import { NavigationItem } from './NavigationItem'
 
 interface NavigationProps {
   items: NavigationItem[]
