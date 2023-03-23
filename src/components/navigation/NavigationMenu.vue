@@ -4,8 +4,8 @@
     :key="`${item.text}-${index}`"
   >
     <RouterLink
-      active-class="text-primary"
-      class="block py-2 w-full text-700"
+      active-class="text-primary font-medium"
+      class="block py-2 w-full text-700 font-normal"
       :to="item.url"
     >
       <i
@@ -14,7 +14,7 @@
       />
       <span class="ml-2">{{ item.text }}</span>
     </RouterLink>
-    <div class="pl-3">
+    <div class="pl-5">
       <NavigationMenu
         :items="item.children"
         :icon-only="iconOnly"
