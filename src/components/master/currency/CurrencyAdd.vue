@@ -47,6 +47,7 @@ import { ICurrency } from '~/models/Currency'
 import BaseInputText from '~/components/base/BaseInputText.vue'
 import { useRouter } from 'vue-router'
 import { useForm } from 'vee-validate'
+import { addCurrency } from '~/api/master/Currency'
 
 const currency: ICurrency = {
   CurrencyCode: '',
@@ -63,8 +64,28 @@ function redirectToCurrencyView() {
   router.push({ name: 'Currency' })
 }
 
-const { handleSubmit } = useForm({})
-const submit = handleSubmit(value => {
+const { handleSubmit } = useForm<ICurrency>({})
+const submit = handleSubmit(async value => {
+  // Set loading on
+
+  // Handle action
   console.log(value)
+  const newCurrency: ICurrency = {
+    CurrencyCode: value.CurrencyCode,
+    CurrencyName: value.CurrencyName,
+    Id: 0
+  }
+  try {
+    await addCurrency(newCurrency)
+    
+    // Show success message
+
+    // Redirect back to list
+    redirectToCurrencyView()
+  } catch (err) {
+    console.error(err)
+  } finally {
+    // Set loading off
+  }
 })
 </script>

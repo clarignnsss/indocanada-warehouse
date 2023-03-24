@@ -20,6 +20,7 @@ import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import CurrencyList from '~/components/master/currency/CurrencyList.vue'
 import { ICurrency } from '~/models/Currency'
+import { getCurrencies } from '~/api/master/Currency'
 
 const currenciesRef = ref([] as ICurrency[])
 const router = useRouter()
@@ -30,18 +31,7 @@ function redirectToAddCurrency() {
 
 onMounted(() => {
   // Load currencies here
-  const currencies: ICurrency[] = [
-    {
-      Id: 1,
-      CurrencyCode: 'CAD',
-      CurrencyName: 'Canadian Dollar',
-    },
-    {
-      Id: 2,
-      CurrencyCode: 'USD',
-      CurrencyName: 'US Dollar',
-    },
-  ]
+  const currencies = getCurrencies()
   currenciesRef.value = currencies
 })
 </script>
