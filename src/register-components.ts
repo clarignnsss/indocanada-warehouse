@@ -12,9 +12,12 @@ import PrimeVue from 'primevue/config'
 import Button from 'primevue/button'
 import Card from 'primevue/card'
 import Column from 'primevue/column'
+import ConfirmDialog from 'primevue/confirmdialog'
 import DataTable from 'primevue/datatable'
 import InputText from 'primevue/inputtext'
 import Sidebar from 'primevue/sidebar'
+
+import ConfirmationService from 'primevue/confirmationservice'
 
 export function registerPrimeVue(app: App) {
   app.use(PrimeVue)
@@ -23,7 +26,11 @@ export function registerPrimeVue(app: App) {
   app.component('Button', Button)
   app.component('Card', Card)
   app.component('Column', Column)
+  app.component('ConfirmDialog', ConfirmDialog)
   app.component('DataTable', DataTable)
   app.component('InputText', InputText)
   app.component('Sidebar', Sidebar)
+
+  // Register services
+  app.use(ConfirmationService)
 }
