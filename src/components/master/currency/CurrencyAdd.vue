@@ -18,19 +18,24 @@
         />
       </div>
     </div>
-    <div class="pt-3 text-right">
-      <Button
-        severity="secondary"
-        @click="redirectToCurrencyView"
-      >
-        Cancel
-      </Button>
-      <Button
-        type="submit"
-        class="ml-2"
-      >
-        Submit
-      </Button>
+    <div class="sm:flex sm:flex-row-reverse inline">
+      <div class="mt-3">
+        <Button
+          type="submit"
+          class="w-full block"
+        >
+          Submit
+        </Button>
+      </div>
+      <div class="mt-3 sm:mr-2">
+        <Button
+          severity="secondary"
+          class="w-full block"
+          @click="redirectToCurrencyView"
+        >
+          Cancel
+        </Button>
+      </div>
     </div>
   </form>
 </template>
