@@ -1,5 +1,5 @@
 export interface ICurrency {
-  Id: number
-  CurrencyCode: string
-  CurrencyName: string
+  currencyId: number
+  currencyCode: string
+  currencyName: string
 }

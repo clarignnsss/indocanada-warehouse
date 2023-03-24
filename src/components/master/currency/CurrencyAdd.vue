@@ -4,7 +4,7 @@
       <div class="col-12 md:col-6">
         <BaseInputText
           id="CurrencyCode"
-          v-model="currencyRef.CurrencyCode"
+          v-model="currencyRef.currencyCode"
           :rules="currencyCodeRules" 
           field-name="Currency Code"
         />
@@ -12,7 +12,7 @@
       <div class="col-12 md:col-6">
         <BaseInputText
           id="CurrencyName"
-          v-model="currencyRef.CurrencyName"
+          v-model="currencyRef.currencyName"
           :rules="currencyNameRules" 
           field-name="Currency Name"
         />
@@ -50,9 +50,9 @@ import { useForm } from 'vee-validate'
 import { addCurrency } from '~/api/master/Currency'
 
 const currency: ICurrency = {
-  CurrencyCode: '',
-  CurrencyName: '',
-  Id: 0,
+  currencyCode: '',
+  currencyName: '',
+  currencyId: 0,
 }
 const currencyRef = ref(currency)
 
@@ -71,9 +71,9 @@ const submit = handleSubmit(async value => {
   // Handle action
   console.log(value)
   const newCurrency: ICurrency = {
-    CurrencyCode: value.CurrencyCode,
-    CurrencyName: value.CurrencyName,
-    Id: 0
+    currencyCode: value.currencyCode,
+    currencyName: value.currencyName,
+    currencyId: 0
   }
   try {
     await addCurrency(newCurrency)

@@ -29,9 +29,9 @@ function redirectToAddCurrency() {
   router.push({ name: 'CurrencyAdd' })
 }
 
-onMounted(() => {
+onMounted(async () => {
   // Load currencies here
-  const currencies = getCurrencies()
+  const currencies = await getCurrencies()
   currenciesRef.value = currencies
 })
 </script>
