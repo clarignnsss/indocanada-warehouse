@@ -32,14 +32,14 @@ onMounted(() => {
   // Load currencies here
   const currencies: ICurrency[] = [
     {
-      id: 1,
-      currencyCode: 'CAD',
-      currencyName: 'Canadian Dollar',
+      Id: 1,
+      CurrencyCode: 'CAD',
+      CurrencyName: 'Canadian Dollar',
     },
     {
-      id: 2,
-      currencyCode: 'USD',
-      currencyName: 'US Dollar',
+      Id: 2,
+      CurrencyCode: 'USD',
+      CurrencyName: 'US Dollar',
     },
   ]
   currenciesRef.value = currencies
