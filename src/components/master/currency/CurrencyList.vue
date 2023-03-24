@@ -3,13 +3,13 @@
     :value="items"
   >
     <Column 
-      field="CurrencyCode"
+      field="currencyCode"
       header="Currency Code"
       class="white-space-nowrap"
       style="min-width: 15rem;"
     />
     <Column 
-      field="CurrencyName"
+      field="currencyName"
       header="Name"
       class="white-space-nowrap"
       style="min-width: 20rem;"

@@ -1,24 +1,27 @@
 import { ICurrency } from '~/models/Currency'
+import { useApi } from '../axiosConfig'
 
 const currencies: ICurrency[] = [
   {
-    Id: 1,
-    CurrencyCode: 'CAD',
-    CurrencyName: 'Canadian Dollar',
+    currencyId: 1,
+    currencyCode: 'CAD',
+    currencyName: 'Canadian Dollar',
   },
   {
-    Id: 2,
-    CurrencyCode: 'USD',
-    CurrencyName: 'US Dollar',
+    currencyId: 2,
+    currencyCode: 'USD',
+    currencyName: 'US Dollar',
   },
 ]
 
-export function getCurrencies() {
+export async function getCurrencies() {
+  const response = await useApi().get<ICurrency[]>('/Currency')
+  const currencies = response.data
   return currencies
 }
 
 export async function addCurrency(currency: ICurrency) {
-  currency.Id = currencies.length
+  currency.currencyId = currencies.length
   currencies.push(currency)
   return currency
 }
