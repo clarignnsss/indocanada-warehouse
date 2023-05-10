@@ -7,11 +7,19 @@ export interface NavigationItem {
 
 export const items: NavigationItem[] = [
   {
+    text: 'User',
+    icon: 'fa-solid fa-house',
+    url: '/',
+    children: [],
+  },
+  
+  {
     text: 'Home',
     icon: 'fa-solid fa-house',
     url: '/',
     children: [],
   },
+
   {
     text: 'Product',
     icon: 'fa-solid fa-cube',

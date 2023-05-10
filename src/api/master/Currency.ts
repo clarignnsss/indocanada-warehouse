@@ -1,5 +1,5 @@
 import { ICurrency } from '~/models/Currency'
-import { useApi } from '../axiosConfig'
+//import { useApi } from '../axiosConfig'
 
 const currencies: ICurrency[] = [
   {
@@ -15,8 +15,9 @@ const currencies: ICurrency[] = [
 ]
 
 export async function getCurrencies() {
-  const response = await useApi().get<ICurrency[]>('/Currency')
-  const currencies = response.data
+  //const response = await useApi().get<ICurrency[]>('/Currency')
+ 
+  // const currencies = response.data
   return currencies
 }
 

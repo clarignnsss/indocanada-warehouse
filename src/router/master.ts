@@ -6,11 +6,19 @@ const routes: RouteRecordRaw[] = [
     name: 'Company',
     component: () => import('~/views/master/company/CompanyView.vue')
   },
+
+  {
+    path: '/master/company/add',
+    name: 'CompanyAdd',
+    component: () => import('~/views/master/company/CompanyAddView.vue')
+  },
+
   {
     path: '/master/currency',
     name: 'Currency',
     component: () => import('~/views/master/currency/CurrencyView.vue')
   },
+  
   {
     path: '/master/currency/add',
     name: 'CurrencyAdd',

@@ -4,6 +4,11 @@ import masterRoutes from './master'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
+    name: 'user',
+    component: () => import('../views/UserView.vue'),
+  },
+  {
+    path: '/',
     name: 'home',
     component: () => import('../views/HomeView.vue'),
   },

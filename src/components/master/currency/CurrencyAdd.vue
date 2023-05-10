@@ -3,7 +3,7 @@
     <div class="grid">
       <div class="col-12 md:col-6">
         <BaseInputText
-          id="CurrencyCode"
+          id="currencyCode"
           v-model="currencyRef.currencyCode"
           :rules="currencyCodeRules" 
           field-name="Currency Code"
@@ -11,7 +11,7 @@
       </div>
       <div class="col-12 md:col-6">
         <BaseInputText
-          id="CurrencyName"
+          id="currencyName"
           v-model="currencyRef.currencyName"
           :rules="currencyNameRules" 
           field-name="Currency Name"
