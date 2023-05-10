@@ -55,7 +55,7 @@
             <a href="Userview.vue" class="image-container">
               <img id="LogoSite" src="../assets/logo indomie.png" alt="INDOMIE Logo">
             </a>
-            <a href="#" onclick="window.location=BM.appUri + 'LoginAD.php' "class="button button-primary wide">Login</a>
+            <a href="#" onclick="window.location=BM.appUri + 'LoginAD.php'" class="button button-primary wide">Login</a>
           </div>
 
           <ui class="links">
