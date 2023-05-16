@@ -1,115 +1,125 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-size: small;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
+*{
   margin: 0;
   padding: 0;
+  box-sizing:border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
+body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background: url('assets/chuttersnap-fyaTq-fIlro-unsplash.jpg');
+  color: black;
+
+}
+.bg-box { 
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 500px;
 }
 
-.swiper-slide img {
-  display: block;
+.container {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: flex;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+  width: 400px;
+}
+
+form {
+  width: 250px;
+  margin: 60px auto;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  margin: 20px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+hr {
+  border-top: 2px solid;
+   
+}
+
+p {
+  text-align: center;
+  height: 10px;
+}
+
+.right img {
+  width: 450px;
+  height: 80%;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+
+}
+input {
+  width: 100%;
+  margin: 2px;
+  border: none;
+  outline: 8px;
+  border-radius: 5px;
+  border: 1px solid gray;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 252px;
+  color: black;
+  font-size: 16px;
   cursor: pointer;
-  transition: border-color 0.25s;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: bisque;
+  font-weight: bold;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background: rgba(214, 86, 64, 1);
 }
 
-
-#app {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 880px) {
+  .container {
+    width: 100%;
+    max-width: 750px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  a:hover {
-    color: #272fbd;
+
+  form {
+    width: 300px;
+    margin: 20px auto;
   }
+
+  .login {
+    width: 400px;
+    padding: 20px;
+  }
+
   button {
-    background-color: #f9f9f9;
+    width: 100%;
+  }
+
+  .right img {
+    width: 100%;
+    height: 100%;
   }
 }
-
-.pre-line {
-  white-space: pre-line;
-}
-
-
